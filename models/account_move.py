@@ -34,3 +34,15 @@ class AccountMove(models.Model):
     def action_download_report(self):
         self.ensure_one()
         return self.env.ref('mod_prueba_tecnica_fac.action_report_account_move_simple').report_action(self)
+    
+
+    def action_open_due_date_wizard(self):
+        self.ensure_one()
+        return {
+            'name': 'Actualizar Fecha de Vencimiento',
+            'type': 'ir.actions.act_window',
+            'res_model': 'account.move.due_date.wizard',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {'default_due_date': self.invoice_date_due, 'active_id': self.id},
+        }

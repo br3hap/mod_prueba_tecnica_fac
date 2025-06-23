@@ -23,6 +23,8 @@
                     type="object"
                     class="btn-primary"
                     />
+                <button name="dummy" type="button" class="o_open_wizard_rpc_button" string="Actualizar Vencimiento"/>
+
             </xpath>
         </field>
     </record>
