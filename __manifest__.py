@@ -6,11 +6,12 @@
     'author': 'Breithner Aquituari',
     'website': '',
     'category': '',
-    'depends': ['base', ],
+    'depends': ['base', 'account'],
     "data": [
         "security/ir.model.access.csv",
-        "views/menu_views.xml",
-        "views/blood_type_views.xml"
+        "views/account_move_views.xml",
+        "views/blood_type_views.xml",
+        "views/menu_views.xml"
     ],
     
     'application': True,
