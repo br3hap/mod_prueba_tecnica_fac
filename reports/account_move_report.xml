@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="report_account_move_simple">
-        <t t-call="web.basic_layout">
-            <div class="page">
-                <h2>Factura: <t t-esc="doc.name"/></h2>
-                <p>Fecha: <t t-esc="doc.invoice_date"/></p>
-                <p>Cliente: <t t-esc="doc.partner_id.name"/></p>
-                <p>Total: <t t-esc="doc.amount_total"/></p>
-            </div>
-        </t>
-    </template>
+    <data>
+        <!-- Plantilla QWeb del reporte -->
+        <template id="report_account_move_simple">
+            <t t-call="web.basic_layout">
+                <div class="page">
+                    <p>Hola</p>
+                    <!-- <h2>Factura: <t t-esc="doc.name"/></h2>
+                    <p>Fecha: <t t-esc="doc.invoice_date"/></p>
+                    <p>Cliente: <t t-esc="doc.partner_id.name"/></p>
+                    <p>Total: <t t-esc="doc.amount_total"/></p> -->
+                </div>
+            </t>
+        </template>
 
-    <report
-        id="action_report_account_move_simple"
-        model="account.move"
-        string="Reporte Simple Factura"
-        report_type="qweb-pdf"
-        name="mod_prueba_tecnica_fac.report_account_move_simple"
-        file="mod_prueba_tecnica_fac.report_account_move_simple"
-        print_report_name="'Factura-%s' % (object.name)"
-    />
+        <!-- Acción del reporte -->
+        <record id="action_report_account_move_simple" model="ir.actions.report">
+            <field name="name">Reporte Simple Factura</field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">mod_prueba_tecnica_fac.report_account_move_simple</field>
+            <field name="report_file">mod_prueba_tecnica_fac.report_account_move_simple</field>
+            <field name="binding_model_id" ref="account.model_account_move"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
 </odoo>
