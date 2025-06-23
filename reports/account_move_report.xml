@@ -5,11 +5,12 @@
         <template id="report_account_move_simple">
             <t t-call="web.basic_layout">
                 <div class="page">
-                    <p>Hola</p>
-                    <!-- <h2>Factura: <t t-esc="doc.name"/></h2>
-                    <p>Fecha: <t t-esc="doc.invoice_date"/></p>
-                    <p>Cliente: <t t-esc="doc.partner_id.name"/></p>
-                    <p>Total: <t t-esc="doc.amount_total"/></p> -->
+                    <t t-foreach="docs" t-as="doc">
+                        <h2>TIPOS DE SANGRES RESTANTES <t t-esc="doc.name"/></h2>
+                        <group name="name" string="string">
+                            <p>Comentario: <t t-esc="doc.narration"/></p>
+                        </group>
+                    </t>
                 </div>
             </t>
         </template>
