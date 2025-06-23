@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_account_move_simple">
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <h2>Factura: <t t-esc="doc.name"/></h2>
+                <p>Fecha: <t t-esc="doc.invoice_date"/></p>
+                <p>Cliente: <t t-esc="doc.partner_id.name"/></p>
+                <p>Total: <t t-esc="doc.amount_total"/></p>
+            </div>
+        </t>
+    </template>
+
+    <report
+        id="action_report_account_move_simple"
+        model="account.move"
+        string="Reporte Simple Factura"
+        report_type="qweb-pdf"
+        name="mod_prueba_tecnica_fac.report_account_move_simple"
+        file="mod_prueba_tecnica_fac.report_account_move_simple"
+        print_report_name="'Factura-%s' % (object.name)"
+    />
+</odoo>

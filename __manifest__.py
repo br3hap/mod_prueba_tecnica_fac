@@ -12,7 +12,9 @@
         "views/account_move_views.xml",
         "views/blood_type_views.xml",
         "views/menu_views.xml",
-        "wizards/type_remaining_sand.xml"
+        "wizards/type_remaining_sand.xml",
+
+        "reports/account_move_report.xml"
     ],
     
     'application': True,
