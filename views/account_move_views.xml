@@ -10,6 +10,9 @@
             <xpath expr="//field[@name='delivery_date']" position="before">
                 <field name="blood_type" readonly="state == 'posted'"/>
             </xpath>
+            <xpath expr="//header" position="inside">
+                <button name="button_comment" string="Comentario" type="object"  invisible="state != 'draft'"/>
+            </xpath>
         </field>
     </record>
 

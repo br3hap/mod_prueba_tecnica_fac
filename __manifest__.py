@@ -11,7 +11,8 @@
         "security/ir.model.access.csv",
         "views/account_move_views.xml",
         "views/blood_type_views.xml",
-        "views/menu_views.xml"
+        "views/menu_views.xml",
+        "wizards/type_remaining_sand.xml"
     ],
     
     'application': True,
