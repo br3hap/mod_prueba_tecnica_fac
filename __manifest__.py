@@ -7,8 +7,10 @@
     'website': '',
     'category': '',
     'depends': ['base', ],
-    'data': [
-        
+    "data": [
+        "security/ir.model.access.csv",
+        "views/menu_views.xml",
+        "views/blood_type_views.xml"
     ],
     
     'application': True,

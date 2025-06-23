@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="mod_prueba_tecnica_fac_menu_root"
+              name="Datos"
+              web_icon="mod_prueba_tecnica_fac,static/description/icon.png"
+              sequence="10"
+    />
+
+</odoo>
